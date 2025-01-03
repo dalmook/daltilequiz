@@ -108,8 +108,8 @@ function loadQuestion(index) {
   // 필요에 따라 500ms로 변경 가능
   // }, 500); // 0.5초 후에 타일 숨김
 
-  // 다음 문제 버튼 숨기기
-  document.getElementById("next-question-btn").classList.add("hidden");
+  // 다음 문제 버튼 숨기기 (팝업 숨기기)
+  document.getElementById("next-question-popup").classList.add("hidden");
 
   // 피드백 메시지 숨기기
   hideFeedback();
@@ -175,10 +175,8 @@ function revealRandomTile() {
   if (unrevealedTiles.length === 0) {
     clearInterval(revealedInterval);
     displayFeedback("모든 타일이 공개되었습니다!", "failure");
-    // 자동으로 다음 문제로 넘어가기 (일정 시간 후)
-    setTimeout(() => {
-      document.getElementById("next-question-btn").click();
-    }, 2000); // 2초 후 자동 클릭
+    // "다음 문제" 버튼 팝업 표시
+    document.getElementById("next-question-popup").classList.remove("hidden");
     return;
   }
 
@@ -262,8 +260,8 @@ function checkAnswer(selectedOption) {
     displayFeedback(`틀렸습니다! 정답은 "${currentAnswer}"입니다. -500점`, "failure");
   }
 
-  // 다음 문제 버튼 표시
-  document.getElementById("next-question-btn").classList.remove("hidden");
+  // "다음 문제" 버튼 팝업 표시
+  document.getElementById("next-question-popup").classList.remove("hidden");
 }
 
 // 점수 업데이트
@@ -302,7 +300,7 @@ function endQuiz() {
   document.getElementById("timer-info").textContent = "퀴즈가 종료되었습니다. 다른 카테고리를 선택해보세요!";
 
   // 다음 문제 버튼 숨기기
-  document.getElementById("next-question-btn").classList.add("hidden");
+  document.getElementById("next-question-popup").classList.add("hidden");
 
   // 피드백 메시지 표시
   displayFeedback("퀴즈를 완료하셨습니다!", "success");

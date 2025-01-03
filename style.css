@@ -75,12 +75,6 @@ body {
   justify-content: center;
 }
 
-#progress-container label {
-  margin-right: 10px;
-  font-size: 16px;
-  color: #555;
-}
-
 #progress-bar {
   width: 60%;
   max-width: 300px;
@@ -265,12 +259,28 @@ body {
   color: #fff;
 }
 
-/* 다음 문제 버튼 */
+/* 다음 문제 버튼 팝업 */
+#next-question-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(64, 192, 87, 0.9); /* 반투명 배경 */
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 10;
+  animation: fadeIn 0.5s ease-out;
+}
+
+#next-question-popup.hidden {
+  display: none;
+}
+
 #next-question-btn {
-  margin-top: 20px;
   padding: 12px 35px;
-  background-color: #40c057;
-  color: #fff;
+  background-color: #fff; /* 버튼 배경을 흰색으로 변경 */
+  color: #40c057;
   border: none;
   cursor: pointer;
   border-radius: 50px;
@@ -280,12 +290,24 @@ body {
 }
 
 #next-question-btn:hover {
-  background-color: #37b24d;
+  background-color: #f1f3f5;
   transform: translateY(-3px);
 }
 
 #next-question-btn:active {
   transform: translateY(0px);
+}
+
+/* 팝업 애니메이션 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
 }
 
 /* 반응형 디자인 */
