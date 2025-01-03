@@ -1,20 +1,117 @@
 [
   {
     "category": "ramen",
-    "image": "images/ramen1.jpg",
-    "answer": "신라면",
-    "options": ["신라면", "진라면", "불닭볶음면", "짜파게티", "너구리", "삼양라면", "안성탕면", "육개장"]
+    "image": "images/김치라면.webp",
+    "answer": "김치라면"
+  },
+  {
+    "category": "ramen",
+    "image": "images/꼬꼬면.webp",
+    "answer": "꼬꼬면"
+  },
+  {
+    "category": "ramen",
+    "image": "images/된장라면.webp",
+    "answer": "된장라면"
+  },
+  {
+    "category": "ramen",
+    "image": "images/마열라면.jpg",
+    "answer": "마열라면"
+  },
+  {
+    "category": "ramen",
+    "image": "images/멸치칼국수.webp",
+    "answer": "멸치칼국수"
+  },
+  {
+    "category": "ramen",
+    "image": "images/미역국라면.webp",
+    "answer": "미역국라면"
+  },
+  {
+    "category": "ramen",
+    "image": "images/불닭볶음면.webp",
+    "answer": "불닭볶음면"
+  },
+  {
+    "category": "ramen",
+    "image": "images/빽라면.jpg",
+    "answer": "빽라면"
+  },
+  {
+    "category": "ramen",
+    "image": "images/삼양라면.jpg",
+    "answer": "삼양라면"
+  },
+  {
+    "category": "ramen",
+    "image": "images/스파게티.webp",
+    "answer": "스파게티"
+  },
+  {
+    "category": "ramen",
+    "image": "images/신라면1.jpg",
+    "answer": "신라면"
+  },
+  {
+    "category": "ramen",
+    "image": "images/신라면레드.jpg",
+    "answer": "신라면 레드"
+  },
+  {
+    "category": "ramen",
+    "image": "images/열라면.webp",
+    "answer": "열라면"
+  },
+  {
+    "category": "ramen",
+    "image": "images/진라면.jpg",
+    "answer": "진라면 매운맛"
+  },
+  {
+    "category": "ramen",
+    "image": "images/짜파게티.webp",
+    "answer": "짜파게티"
+  },
+  {
+    "category": "ramen",
+    "image": "images/틈새라면.png",
+    "answer": "틈새라면"
+  },
+  {
+    "category": "ramen",
+    "image": "images/해물라면.png",
+    "answer": "해물라면"
   },
   {
     "category": "snack",
     "image": "images/snack1.jpg",
-    "answer": "새우깡",
-    "options": ["새우깡", "포카칩", "오징어집", "맛동산", "홈런볼", "꼬깔콘", "고구마깡", "포스틱"]
+    "answer": "새우깡"
+  },
+  {
+    "category": "snack",
+    "image": "images/snack2.jpg",
+    "answer": "포카칩"
+  },
+  {
+    "category": "snack",
+    "image": "images/snack3.jpg",
+    "answer": "오징어집"
   },
   {
     "category": "beverage",
     "image": "images/beverage1.jpg",
-    "answer": "코카콜라",
-    "options": ["코카콜라", "펩시", "사이다", "환타", "마운틴듀", "밀키스", "2% 부족할 때", "이프로"]
+    "answer": "코카콜라"
+  },
+  {
+    "category": "beverage",
+    "image": "images/beverage2.jpg",
+    "answer": "펩시"
+  },
+  {
+    "category": "beverage",
+    "image": "images/beverage3.jpg",
+    "answer": "사이다"
   }
 ]

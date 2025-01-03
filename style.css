@@ -3,11 +3,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background: #fdfdfd;
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
   color: #333;
   text-align: center;
   padding: 20px;
@@ -33,13 +33,20 @@ body {
   border: none;
   background-color: #ff6b6b;
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 50px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .category-btn:hover {
   background-color: #fa5252;
+  transform: translateY(-3px);
+}
+
+.category-btn:active {
+  transform: translateY(0px);
 }
 
 /* 퀴즈 게임 화면 */
@@ -49,32 +56,93 @@ body {
 
 #quiz-category {
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
+  color: #444;
+}
+
+/* 프로그레스 바 */
+#progress-container {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#progress-container label {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+#progress-bar {
+  width: 200px;
+  height: 20px;
+  appearance: none;
+}
+
+#progress-bar::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 10px;
+}
+
+#progress-bar::-webkit-progress-value {
+  background-color: #40c057;
+  border-radius: 10px;
+}
+
+#progress-text {
+  margin-left: 10px;
+  font-size: 16px;
+  color: #555;
 }
 
 /* 8x8 타일 */
 #quiz-grid {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-gap: 4px;
-  max-width: 400px;
+  grid-template-columns: repeat(8, 50px);
+  grid-template-rows: repeat(8, 50px);
+  grid-gap: 2px;
+  width: 400px;
+  height: 400px;
   margin: 0 auto;
+  position: relative;
+  background-color: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .tile {
-  width: 45px;
-  height: 45px;
-  background-color: #ccc;
-  border: 1px solid #999;
+  position: relative; /* 커버 레이어를 위해 상대 위치 지정 */
+  width: 50px;
+  height: 50px;
+  background-image: url('');
+  background-size: 400px 400px;
+  background-repeat: no-repeat;
   cursor: default;
-  transition: background 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.5s ease;
+  opacity: 1;
 }
 
-.tile.revealed {
-  background-color: #fff;
-  background-size: cover;
-  background-position: center;
+.tile:hover {
+  transform: scale(1.05);
+}
+
+.tile .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+.tile.revealed .cover {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* 보기 영역 */
@@ -83,31 +151,217 @@ body {
 }
 
 #choices-buttons {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .choice-btn {
   display: inline-block;
   margin: 5px;
-  padding: 10px 20px;
+  padding: 12px 25px;
   background-color: #228be6;
   color: #fff;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 25px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 16px;
 }
 
 .choice-btn:hover {
   background-color: #1c7ed6;
+  transform: translateY(-3px);
+}
+
+.choice-btn:active {
+  transform: translateY(0px);
 }
 
 /* 점수, 타이머 정보 */
 #score-area {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 20px;
+}
+
+.score-box {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 10px;
+}
+
+.score-box p {
+  font-weight: bold;
+  color: #444;
+  position: relative;
+}
+
+.score-box p.highlight::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 2px solid #40c057;
+  border-radius: 10px;
+  animation: pulse 1s ease-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
 }
 
 #timer-info {
   margin-top: 10px;
   color: #555;
+  font-size: 16px;
+}
+
+/* 피드백 메시지 */
+#feedback-message {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#feedback-message.success {
+  background-color: #40c057;
+  color: #fff;
+}
+
+#feedback-message.failure {
+  background-color: #e03131;
+  color: #fff;
+}
+
+#feedback-message.update {
+  background-color: #e64980;
+  color: #fff;
+}
+
+/* 다음 문제 버튼 */
+#next-question-btn {
+  margin-top: 20px;
+  padding: 12px 35px;
+  background-color: #40c057;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: 18px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#next-question-btn:hover {
+  background-color: #37b24d;
+  transform: translateY(-3px);
+}
+
+#next-question-btn:active {
+  transform: translateY(0px);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 800px) and (min-width: 601px) {
+  #quiz-grid {
+    grid-template-columns: repeat(8, 40px);
+    grid-template-rows: repeat(8, 40px);
+    width: 320px;
+    height: 320px;
+  }
+
+  .tile {
+    width: 40px;
+    height: 40px;
+    background-size: 320px 320px;
+  }
+
+  #progress-bar {
+    width: 160px;
+    height: 16px;
+  }
+
+  #progress-text {
+    font-size: 14px;
+  }
+
+  .category-btn, #next-question-btn {
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+
+  .choice-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .score-box {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  #quiz-grid {
+    grid-template-columns: repeat(8, 30px);
+    grid-template-rows: repeat(8, 30px);
+    width: 240px;
+    height: 240px;
+  }
+
+  .tile {
+    width: 30px;
+    height: 30px;
+    background-size: 240px 240px;
+  }
+
+  #progress-container {
+    flex-direction: column;
+  }
+
+  #progress-container label {
+    margin-bottom: 5px;
+  }
+
+  #progress-bar {
+    width: 180px;
+    height: 14px;
+  }
+
+  #progress-text {
+    font-size: 14px;
+    margin-left: 0;
+  }
+
+  .category-btn, #next-question-btn {
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+
+  .choice-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .score-box {
+    gap: 20px;
+  }
 }

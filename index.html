@@ -20,6 +20,14 @@
   <!-- 퀴즈 게임 화면 -->
   <div id="game-container" class="hidden">
     <h2 id="quiz-category"></h2>
+    
+    <!-- 프로그레스 바 -->
+    <div id="progress-container">
+      <label for="progress-bar">진행 상황:</label>
+      <progress id="progress-bar" value="0" max="10"></progress>
+      <span id="progress-text">0 / 10</span>
+    </div>
+    
     <div id="quiz-grid"></div>
     
     <div id="choices-container">
@@ -28,9 +36,18 @@
     </div>
     
     <div id="score-area">
-      <p>점수: <span id="score-value">0</span></p>
+      <div class="score-box">
+        <p>점수: <span id="score-value">0</span></p>
+        <p>최고 점수: <span id="high-score">0</span></p>
+      </div>
       <p id="timer-info"></p>
     </div>
+    
+    <!-- 피드백 메시지 영역 -->
+    <div id="feedback-message" class="hidden"></div>
+    
+    <!-- 다음 문제 버튼 -->
+    <button id="next-question-btn" class="hidden">다음 문제</button>
   </div>
 
   <script src="script.js"></script>
