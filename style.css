@@ -56,9 +56,15 @@ body {
 
 #quiz-category {
   margin-bottom: 20px;
-  font-size: 26px;
+  font-size: 32px;
   font-weight: bold;
   color: #444;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  /* 추가 스타일 */
+  background: linear-gradient(90deg, #ff6b6b, #ff4757);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 /* 프로그레스 바 */
@@ -103,7 +109,7 @@ body {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
-  grid-gap: 2px;
+  grid-gap: 1px; /* 선을 더 얇게 */
   width: 90vw; /* 화면 너비의 90% */
   max-width: 400px;
   aspect-ratio: 1 / 1; /* 정사각형 유지 */

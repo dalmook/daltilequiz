@@ -86,8 +86,8 @@ function loadQuestion(index) {
   const question = questions[index];
   currentAnswer = question.answer;
 
-  // 퀴즈 정보 설정
-  document.getElementById("quiz-category").textContent = `[${capitalizeFirstLetter(selectedCategory)}] 이미지 맞추기 퀴즈! (문제 ${index + 1} / ${totalQuestions})`;
+  // 퀴즈 정보 설정 (헤더 텍스트 간소화)
+  document.getElementById("quiz-category").textContent = `이미지 맞추기 퀴즈!`;
 
   // 타일 그리드 초기화
   createTiles(question.image);
@@ -269,6 +269,9 @@ function checkAnswer(selectedOption) {
 // 점수 업데이트
 function updateScore(points) {
   score += points;
+
+  // 점수가 음수가 되지 않도록 처리 삭제
+  // if (score < 0) score = 0;
 
   const scoreElement = document.getElementById("score-value");
   scoreElement.textContent = score;
