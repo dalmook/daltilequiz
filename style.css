@@ -315,7 +315,7 @@ body {
 /* 다음 문제 버튼 팝업 */
 #next-question-popup {
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(64, 192, 87, 0.9); /* 반투명 배경 */
