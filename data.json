@@ -246,12 +246,107 @@
   },
   {
     "category": "beverage",
-    "image": "images/beverage2.jpg",
+    "image": "images/815.jpg",
+    "answer": "815"
+  },
+  {
+    "category": "beverage",
+    "image": "images/갈아만든배.jpg",
+    "answer": "갈아만든배"
+  },
+  {
+    "category": "beverage",
+    "image": "images/닥터패퍼.jpg",
+    "answer": "닥터패퍼"
+  },
+  {
+    "category": "beverage",
+    "image": "images/맥콜.jpg",
+    "answer": "맥콜"
+  },
+  {
+    "category": "beverage",
+    "image": "images/미닛메이드.jpg",
+    "answer": "미닛메이드"
+  },
+  {
+    "category": "beverage",
+    "image": "images/밀키스.jpg",
+    "answer": "밀키스"
+  },
+  {
+    "category": "beverage",
+    "image": "images/바나나맛우유.jpg",
+    "answer": "바나나맛우유"
+  },
+  {
+    "category": "beverage",
+    "image": "images/비락식혜.jpg",
+    "answer": "비락식혜"
+  },
+  {
+    "category": "beverage",
+    "image": "images/뽀로로보리차.jpg",
+    "answer": "뽀로로보리차"
+  },
+  {
+    "category": "beverage",
+    "image": "images/뿌요소다.jpg",
+    "answer": "뿌요소다"
+  },
+  {
+    "category": "beverage",
+    "image": "images/스프라이트.jpg",
+    "answer": "스프라이트"
+  },
+  {
+    "category": "beverage",
+    "image": "images/쌕쌕.jpg",
+    "answer": "쌕쌕"
+  },
+  {
+    "category": "beverage",
+    "image": "images/이프로.jpg",
+    "answer": "이프로"
+  },
+  {
+    "category": "beverage",
+    "image": "images/칠성사이다.jpg",
+    "answer": "칠성사이다"
+  },
+  {
+    "category": "beverage",
+    "image": "images/코카콜라.jpg",
+    "answer": "코카콜라"
+  },
+  {
+    "category": "beverage",
+    "image": "images/코코에몽.jpg",
+    "answer": "코코에몽"
+  },
+  {
+    "category": "beverage",
+    "image": "images/코코팜.jpg",
+    "answer": "코코팜"
+  },
+  {
+    "category": "beverage",
+    "image": "images/탐스.jpg",
+    "answer": "탐스"
+  },
+  {
+    "category": "beverage",
+    "image": "images/펩시.jpg",
     "answer": "펩시"
   },
   {
     "category": "beverage",
-    "image": "images/beverage3.jpg",
-    "answer": "사이다"
+    "image": "images/환타.jpg",
+    "answer": "환타"
+  },
+  {
+    "category": "beverage",
+    "image": "images/코코뿌요.jpg",
+    "answer": "코코뿌요"
   }
 ]
