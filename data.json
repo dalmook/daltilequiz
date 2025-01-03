@@ -86,23 +86,163 @@
   },
   {
     "category": "snack",
-    "image": "images/snack1.jpg",
+    "image": "images/감자깡.jpg",
+    "answer": "감자깡"
+  },
+  {
+    "category": "snack",
+    "image": "images/고구마깡.jpg",
+    "answer": "고구마깡"
+  },
+  {
+    "category": "snack",
+    "image": "images/꼬깔콘.jpg",
+    "answer": "꼬깔콘"
+  },
+  {
+    "category": "snack",
+    "image": "images/꽃게랑.jpg",
+    "answer": "꽃게랑"
+  },
+  {
+    "category": "snack",
+    "image": "images/메이플콘.jpg",
+    "answer": "메이플콘"
+  },
+  {
+    "category": "snack",
+    "image": "images/바나나킥.jpg",
+    "answer": "바나나킥"
+  },
+  {
+    "category": "snack",
+    "image": "images/버터와플.jpg",
+    "answer": "버터와플"
+  },
+  {
+    "category": "snack",
+    "image": "images/빼빼로.jpg",
+    "answer": "빼빼로"
+  },
+  {
+    "category": "snack",
+    "image": "images/새우깡.jpg",
     "answer": "새우깡"
   },
   {
     "category": "snack",
-    "image": "images/snack2.jpg",
+    "image": "images/스윙칩.jpg",
+    "answer": "스윙칩"
+  },
+  {
+    "category": "snack",
+    "image": "images/신당동떡볶이.jpg",
+    "answer": "신당동떡볶이"
+  },
+  {
+    "category": "snack",
+    "image": "images/신짱.jpg",
+    "answer": "못말리는 신짱"
+  },
+  {
+    "category": "snack",
+    "image": "images/쌀로별.jpg",
+    "answer": "쌀로별"
+  },
+  {
+    "category": "snack",
+    "image": "images/씨리얼.jpg",
+    "answer": "씨리얼"
+  },
+  {
+    "category": "snack",
+    "image": "images/알새우칩.jpg",
+    "answer": "알새우칩"
+  },
+  {
+    "category": "snack",
+    "image": "images/양파링.jpg",
+    "answer": "양파링"
+  },
+  {
+    "category": "snack",
+    "image": "images/오잉.jpg",
+    "answer": "오잉"
+  },
+  {
+    "category": "snack",
+    "image": "images/오징어집.jpg",
+    "answer": "오징어집"
+  },
+  {
+    "category": "snack",
+    "image": "images/인디안밥.jpg",
+    "answer": "인디안밥"
+  },
+  {
+    "category": "snack",
+    "image": "images/자갈치.jpg",
+    "answer": "자갈치"
+  },
+  {
+    "category": "snack",
+    "image": "images/오징어집.jpg",
+    "answer": "오징어집"
+  },
+  {
+    "category": "snack",
+    "image": "images/초코송이.jpg",
+    "answer": "초코송이"
+  },
+  {
+    "category": "snack",
+    "image": "images/치토스.jpg",
+    "answer": "치토스"
+  },
+  {
+    "category": "snack",
+    "image": "images/카라멜땅콩.jpg",
+    "answer": "카라멜땅콩"
+  },
+  {
+    "category": "snack",
+    "image": "images/칸쵸.jpg",
+    "answer": "칸쵸"
+  },
+  {
+    "category": "snack",
+    "image": "images/칸츄리콘.jpg",
+    "answer": "칸츄리콘"
+  },
+  {
+    "category": "snack",
+    "image": "images/쿠쿠다스.jpg",
+    "answer": "쿠쿠다스"
+  },
+  {
+    "category": "snack",
+    "image": "images/통크.jpg",
+    "answer": "통크"
+  },
+  {
+    "category": "snack",
+    "image": "images/포스틱.jpg",
+    "answer": "포스틱"
+  },
+  {
+    "category": "snack",
+    "image": "images/포카칩.jpg",
     "answer": "포카칩"
   },
   {
     "category": "snack",
-    "image": "images/snack3.jpg",
-    "answer": "오징어집"
+    "image": "images/포테토칩.jpg",
+    "answer": "포테토칩"
   },
   {
-    "category": "beverage",
-    "image": "images/beverage1.jpg",
-    "answer": "코카콜라"
+    "category": "snack",
+    "image": "images/포스틱.jpg",
+    "answer": "포스틱"
   },
   {
     "category": "beverage",
