@@ -338,5 +338,352 @@
     "category": "beverage",
     "image": "images/코코뿌요.png",
     "answer": "코코뿌요"
+  },
+  
+
+  {
+    "category": "beverage",
+    "image": "images/815.png",
+    "answer": "815"
+  },
+  {
+    "category": "beverage",
+    "image": "images/갈아만든배.png",
+    "answer": "갈아만든배"
+  },
+  {
+    "category": "beverage",
+    "image": "images/닥터패퍼.png",
+    "answer": "닥터페퍼"
+  },
+  {
+    "category": "beverage",
+    "image": "images/맥콜.png",
+    "answer": "맥콜"
+  },
+  {
+    "category": "beverage",
+    "image": "images/미닛메이드.png",
+    "answer": "미닛메이드"
+  },
+  {
+    "category": "beverage",
+    "image": "images/밀키스.png",
+    "answer": "밀키스"
+  },
+  {
+    "category": "beverage",
+    "image": "images/바나나맛우유.png",
+    "answer": "바나나맛우유"
+  },
+  {
+    "category": "beverage",
+    "image": "images/비락식혜.png",
+    "answer": "비락식혜"
+  },
+  {
+    "category": "beverage",
+    "image": "images/뽀로로보리차.png",
+    "answer": "뽀로로보리차"
+  },
+  {
+    "category": "beverage",
+    "image": "images/뿌요소다.png",
+    "answer": "뿌요소다"
+  },
+  {
+    "category": "beverage",
+    "image": "images/스프라이트.png",
+    "answer": "스프라이트"
+  },
+  {
+    "category": "beverage",
+    "image": "images/쌕쌕.png",
+    "answer": "쌕쌕"
+  },
+  {
+    "category": "beverage",
+    "image": "images/이프로.png",
+    "answer": "이프로"
+  },
+  {
+    "category": "beverage",
+    "image": "images/칠성사이다.png",
+    "answer": "칠성사이다"
+  },
+  {
+    "category": "beverage",
+    "image": "images/코카콜라.png",
+    "answer": "코카콜라"
+  },
+  {
+    "category": "beverage",
+    "image": "images/코코에몽.png",
+    "answer": "코코에몽"
+  },
+  {
+    "category": "beverage",
+    "image": "images/코코팜.png",
+    "answer": "코코팜"
+  },
+  {
+    "category": "beverage",
+    "image": "images/탐스.png",
+    "answer": "탐스"
+  },
+  {
+    "category": "beverage",
+    "image": "images/펩시.png",
+    "answer": "펩시"
+  },
+  {
+    "category": "beverage",
+    "image": "images/환타.png",
+    "answer": "환타"
+  },
+  {
+    "category": "beverage",
+    "image": "images/코코뿌요.png",
+    "answer": "코코뿌요"
+  },
+  {
+    "category": "cinema",
+    "image": "images/cinema/노인을 위한 나라는 없다.jpg",
+    "answer": "노인을 위한 나라는 없다"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/다크 나이트.jpg",
+      "answer": "다크 나이트"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/대부.jpg",
+      "answer": "대부"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/더 울프 오브 월 스트리트.jpg",
+      "answer": "더 울프 오브 월 스트리트"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/라이언일병구하기.jpg",
+      "answer": "라이언일병구하기"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/레옹.jpg",
+      "answer": "레옹"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/메멘토.jpg",
+      "answer": "메멘토"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/벤허.jpg",
+      "answer": "벤허"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/브로크백 마운틴.jpg",
+      "answer": "브로크백 마운틴"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/쇼생크 탈출.jpg",
+      "answer": "쇼생크 탈출"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/쉰들러 리스트.jpg",
+      "answer": "쉰들러 리스트"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/시네마 천국.jpg",
+      "answer": "시네마 천국"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/식스 센스.jpg",
+      "answer": "식스 센스"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/올드보이.jpg",
+      "answer": "올드보이"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/인생은 아름다워.jpg",
+      "answer": "인생은 아름다워"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/인셉션.jpg",
+      "answer": "인셉션"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/인터스텔라.jpg",
+      "answer": "인터스텔라"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/지옥의 묵시록.jpg",
+      "answer": "지옥의 묵시록"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/타이타닉.jpg",
+      "answer": "타이타닉"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/테넷.jpg",
+      "answer": "테넷"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/포레스트 검프.jpg",
+      "answer": "포레스트 검프"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/피아니스트.jpg",
+      "answer": "피아니스트"
+  },
+  {
+    "category": "singer",
+    "image": "images/singer/BTS.jpg",
+    "answer": "BTS"
+  },
+  {
+      "category": "singer",
+      "image": "images/singer/GOD.jpg",
+      "answer": "GOD"
+  },
+  {
+      "category": "singer",
+      "image": "images/singer/HOT.jpg",
+      "answer": "HOT"
+  },
+  {
+      "category": "singer",
+      "image": "images/singer/ILLIT.jpg",
+      "answer": "ILLIT"
+  },
+  {
+      "category": "singer",
+      "image": "images/singer/IVE.jpg",
+      "answer": "IVE"
+  },
+  {
+      "category": "singer",
+      "image": "images/singer/NCT.jpg",
+      "answer": "NCT"
+  },
+  {
+      "category": "singer",
+      "image": "images/singer/QWER.jpg",
+      "answer": "QWER"
+  },
+  {
+      "category": "singer",
+      "image": "images/singer/R.ef.jpg",
+      "answer": "R.ef"
+  },
+  {
+      "category": "singer",
+      "image": "images/singer/SES.jpg",
+      "answer": "SES"
+  },
+  {
+      "category": "singer",
+      "image": "images/singer/노이즈.jpg",
+      "answer": "노이즈"
+  },
+  {
+      "category": "singer",
+      "image": "images/singer/뉴진스.jpg",
+      "answer": "뉴진스"
+  },
+  {
+      "category": "singer",
+      "image": "images/singer/듀스.jpg",
+      "answer": "듀스"
+  },
+  {
+      "category": "singer",
+      "image": "images/singer/룰라.jpg",
+      "answer": "룰라"
+  },
+  {
+      "category": "singer",
+      "image": "images/singer/마마무.jpg",
+      "answer": "마마무"
+  },
+  {
+      "category": "singer",
+      "image": "images/singer/베이비복스.jpg",
+      "answer": "베이비복스"
+  },
+  {
+      "category": "singer",
+      "image": "images/singer/서태지와 아이들.jpg",
+      "answer": "서태지와 아이들"
+  },
+  {
+      "category": "singer",
+      "image": "images/singer/솔리드.jpg",
+      "answer": "솔리드"
+  },
+  {
+      "category": "singer",
+      "image": "images/singer/신화.jpg",
+      "answer": "신화"
+  },
+  {
+      "category": "singer",
+      "image": "images/singer/아이유.jpg",
+      "answer": "아이유"
+  },
+  {
+      "category": "singer",
+      "image": "images/singer/자자.jpg",
+      "answer": "자자"
+  },
+  {
+      "category": "singer",
+      "image": "images/singer/젝스키스.jpg",
+      "answer": "젝스키스"
+  },
+  {
+      "category": "singer",
+      "image": "images/singer/지코.jpg",
+      "answer": "지코"
+  },
+  {
+      "category": "singer",
+      "image": "images/singer/쿨.jpg",
+      "answer": "쿨"
+  },
+  {
+      "category": "singer",
+      "image": "images/singer/터보.jpg",
+      "answer": "터보"
+  },
+  {
+      "category": "singer",
+      "image": "images/singer/트와이스.jpg",
+      "answer": "트와이스"
+  },
+  {
+      "category": "singer",
+      "image": "images/singer/핑클.jpg",
+      "answer": "핑클"
   }
 ]
