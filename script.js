@@ -105,6 +105,8 @@ function loadQuestion(index) {
     hideAllTiles(); // 모든 타일을 숨깁니다.
     startRevealingTiles(); // 타일 공개 시작
   }, 0); // 즉시 타일 숨김
+  // 필요에 따라 500ms로 변경 가능
+  // }, 500); // 0.5초 후에 타일 숨김
 
   // 다음 문제 버튼 숨기기
   document.getElementById("next-question-btn").classList.add("hidden");
@@ -173,7 +175,10 @@ function revealRandomTile() {
   if (unrevealedTiles.length === 0) {
     clearInterval(revealedInterval);
     displayFeedback("모든 타일이 공개되었습니다!", "failure");
-    document.getElementById("next-question-btn").classList.remove("hidden");
+    // 자동으로 다음 문제로 넘어가기 (일정 시간 후)
+    setTimeout(() => {
+      document.getElementById("next-question-btn").click();
+    }, 2000); // 2초 후 자동 클릭
     return;
   }
 
@@ -264,7 +269,7 @@ function checkAnswer(selectedOption) {
 // 점수 업데이트
 function updateScore(points) {
   score += points;
-  
+
   const scoreElement = document.getElementById("score-value");
   scoreElement.textContent = score;
 
