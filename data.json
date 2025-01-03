@@ -131,12 +131,12 @@
   },
   {
     "category": "snack",
-    "image": "images/스윙칩.jpg",
+    "image": "images/스윙칩.webp",
     "answer": "스윙칩"
   },
   {
     "category": "snack",
-    "image": "images/신당동떡볶이.jpg",
+    "image": "images/신당동떡볶이.webp",
     "answer": "신당동떡볶이"
   },
   {
@@ -146,12 +146,12 @@
   },
   {
     "category": "snack",
-    "image": "images/쌀로별.jpg",
+    "image": "images/쌀로별.jpeg",
     "answer": "쌀로별"
   },
   {
     "category": "snack",
-    "image": "images/씨리얼.jpg",
+    "image": "images/씨리얼.webp",
     "answer": "씨리얼"
   },
   {
@@ -171,7 +171,7 @@
   },
   {
     "category": "snack",
-    "image": "images/오징어집.jpg",
+    "image": "images/오징어집.webp",
     "answer": "오징어집"
   },
   {
@@ -181,17 +181,12 @@
   },
   {
     "category": "snack",
-    "image": "images/자갈치.jpg",
+    "image": "images/자갈치.webp",
     "answer": "자갈치"
   },
   {
     "category": "snack",
-    "image": "images/오징어집.jpg",
-    "answer": "오징어집"
-  },
-  {
-    "category": "snack",
-    "image": "images/초코송이.jpg",
+    "image": "images/초코송이.webp",
     "answer": "초코송이"
   },
   {
@@ -206,12 +201,12 @@
   },
   {
     "category": "snack",
-    "image": "images/칸쵸.jpg",
+    "image": "images/칸쵸.webp",
     "answer": "칸쵸"
   },
   {
     "category": "snack",
-    "image": "images/칸츄리콘.jpg",
+    "image": "images/칸츄리콘.webp",
     "answer": "칸츄리콘"
   },
   {
@@ -226,17 +221,12 @@
   },
   {
     "category": "snack",
-    "image": "images/포스틱.jpg",
-    "answer": "포스틱"
-  },
-  {
-    "category": "snack",
     "image": "images/포카칩.jpg",
     "answer": "포카칩"
   },
   {
     "category": "snack",
-    "image": "images/포테토칩.jpg",
+    "image": "images/포테토칩.jpeg",
     "answer": "포테토칩"
   },
   {
@@ -246,107 +236,107 @@
   },
   {
     "category": "beverage",
-    "image": "images/815.jpg",
+    "image": "images/815.png",
     "answer": "815"
   },
   {
     "category": "beverage",
-    "image": "images/갈아만든배.jpg",
+    "image": "images/갈아만든배.png",
     "answer": "갈아만든배"
   },
   {
     "category": "beverage",
-    "image": "images/닥터패퍼.jpg",
-    "answer": "닥터패퍼"
+    "image": "images/닥터패퍼.png",
+    "answer": "닥터페퍼"
   },
   {
     "category": "beverage",
-    "image": "images/맥콜.jpg",
+    "image": "images/맥콜.png",
     "answer": "맥콜"
   },
   {
     "category": "beverage",
-    "image": "images/미닛메이드.jpg",
+    "image": "images/미닛메이드.png",
     "answer": "미닛메이드"
   },
   {
     "category": "beverage",
-    "image": "images/밀키스.jpg",
+    "image": "images/밀키스.png",
     "answer": "밀키스"
   },
   {
     "category": "beverage",
-    "image": "images/바나나맛우유.jpg",
+    "image": "images/바나나맛우유.png",
     "answer": "바나나맛우유"
   },
   {
     "category": "beverage",
-    "image": "images/비락식혜.jpg",
+    "image": "images/비락식혜.png",
     "answer": "비락식혜"
   },
   {
     "category": "beverage",
-    "image": "images/뽀로로보리차.jpg",
+    "image": "images/뽀로로보리차.png",
     "answer": "뽀로로보리차"
   },
   {
     "category": "beverage",
-    "image": "images/뿌요소다.jpg",
+    "image": "images/뿌요소다.png",
     "answer": "뿌요소다"
   },
   {
     "category": "beverage",
-    "image": "images/스프라이트.jpg",
+    "image": "images/스프라이트.png",
     "answer": "스프라이트"
   },
   {
     "category": "beverage",
-    "image": "images/쌕쌕.jpg",
+    "image": "images/쌕쌕.png",
     "answer": "쌕쌕"
   },
   {
     "category": "beverage",
-    "image": "images/이프로.jpg",
+    "image": "images/이프로.png",
     "answer": "이프로"
   },
   {
     "category": "beverage",
-    "image": "images/칠성사이다.jpg",
+    "image": "images/칠성사이다.png",
     "answer": "칠성사이다"
   },
   {
     "category": "beverage",
-    "image": "images/코카콜라.jpg",
+    "image": "images/코카콜라.png",
     "answer": "코카콜라"
   },
   {
     "category": "beverage",
-    "image": "images/코코에몽.jpg",
+    "image": "images/코코에몽.png",
     "answer": "코코에몽"
   },
   {
     "category": "beverage",
-    "image": "images/코코팜.jpg",
+    "image": "images/코코팜.png",
     "answer": "코코팜"
   },
   {
     "category": "beverage",
-    "image": "images/탐스.jpg",
+    "image": "images/탐스.png",
     "answer": "탐스"
   },
   {
     "category": "beverage",
-    "image": "images/펩시.jpg",
+    "image": "images/펩시.png",
     "answer": "펩시"
   },
   {
     "category": "beverage",
-    "image": "images/환타.jpg",
+    "image": "images/환타.png",
     "answer": "환타"
   },
   {
     "category": "beverage",
-    "image": "images/코코뿌요.jpg",
+    "image": "images/코코뿌요.png",
     "answer": "코코뿌요"
   }
 ]
