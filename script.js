@@ -19,6 +19,8 @@ fetch("data.json")
   })
   .catch((error) => {
     console.error("JSON 불러오기 실패:", error);
+    displayFeedback("데이터를 불러오는 데 실패했습니다.", "failure");
+    resetToCategorySelection();
   });
 
 // 카테고리 버튼 클릭 이벤트 등록
@@ -57,7 +59,7 @@ function startQuiz(category) {
   // 해당 카테고리의 문제들을 필터링
   const categoryQuestions = data.filter((item) => item.category === category);
   if (categoryQuestions.length < totalQuestions) {
-    displayFeedback("선택한 카테고리에 문제가 충분하지 않습니다. 최소 10문제가 필요합니다.", "failure");
+    displayFeedback(`선택한 카테고리에 문제가 충분하지 않습니다. 최소 ${totalQuestions}문제가 필요합니다.`, "failure");
     resetToCategorySelection();
     return;
   }
@@ -70,7 +72,7 @@ function startQuiz(category) {
   updateScore(0);
   updateProgress(0);
   updateProgressText(0);
-  document.getElementById("timer-info").textContent = "이미지가 2초마다 한 칸씩 공개됩니다!";
+  document.getElementById("timer-info").textContent = "이미지가 1초마다 한 칸씩 공개됩니다!";
 
   // 프로그레스 바 초기화
   updateProgressText(0);
@@ -98,7 +100,11 @@ function loadQuestion(index) {
   updateProgress(index + 1);
   updateProgressText(index + 1);
 
-
+  // 타일 공개 전에 잠시 이미지 전체 공개 (0초)
+  setTimeout(() => {
+    hideAllTiles(); // 모든 타일을 숨깁니다.
+    startRevealingTiles(); // 타일 공개 시작
+  }, 0); // 즉시 타일 숨김
 
   // 다음 문제 버튼 숨기기
   document.getElementById("next-question-btn").classList.add("hidden");
@@ -126,10 +132,10 @@ function hideAllTiles() {
 
 // 타일 공개 시작 함수
 function startRevealingTiles() {
-  // 2초마다 랜덤 타일 공개
+  // 1초마다 랜덤 타일 공개
   revealedInterval = setInterval(() => {
     revealRandomTile();
-  }, 1000); // 2초 간격으로 타일 공개
+  }, 1000); // 1초 간격으로 타일 공개
 }
 
 // 8x8 타일 생성
