@@ -1,0 +1,20 @@
+[
+  {
+    "category": "ramen",
+    "image": "images/ramen1.jpg",
+    "answer": "신라면",
+    "options": ["신라면", "진라면", "불닭볶음면", "짜파게티", "너구리", "삼양라면", "안성탕면", "육개장"]
+  },
+  {
+    "category": "snack",
+    "image": "images/snack1.jpg",
+    "answer": "새우깡",
+    "options": ["새우깡", "포카칩", "오징어집", "맛동산", "홈런볼", "꼬깔콘", "고구마깡", "포스틱"]
+  },
+  {
+    "category": "beverage",
+    "image": "images/beverage1.jpg",
+    "answer": "코카콜라",
+    "options": ["코카콜라", "펩시", "사이다", "환타", "마운틴듀", "밀키스", "2% 부족할 때", "이프로"]
+  }
+]
