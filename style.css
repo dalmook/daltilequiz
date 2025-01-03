@@ -319,7 +319,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(64, 192, 87, 0.9); /* 반투명 배경 */
-  padding: 20px 40px;
+  padding: 20px 35px;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   z-index: 10;
@@ -331,7 +331,7 @@ body {
 }
 
 #next-question-btn {
-  padding: 12px 35px;
+  padding: 12px 30px;
   background-color: #fff; /* 버튼 배경을 흰색으로 변경 */
   color: #40c057;
   border: none;
