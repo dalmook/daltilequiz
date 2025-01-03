@@ -1,0 +1,113 @@
+/* 기본 리셋 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #fdfdfd;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+/* 숨김 처리 */
+.hidden {
+  display: none;
+}
+
+/* 카테고리 선택 화면 */
+#category-container {
+  margin-top: 50px;
+}
+
+.category-buttons {
+  margin-top: 20px;
+}
+
+.category-btn {
+  margin: 0 10px;
+  padding: 15px 30px;
+  border: none;
+  background-color: #ff6b6b;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.category-btn:hover {
+  background-color: #fa5252;
+}
+
+/* 퀴즈 게임 화면 */
+#game-container {
+  margin-top: 30px;
+}
+
+#quiz-category {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 8x8 타일 */
+#quiz-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 4px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.tile {
+  width: 45px;
+  height: 45px;
+  background-color: #ccc;
+  border: 1px solid #999;
+  cursor: default;
+  transition: background 0.3s ease;
+}
+
+.tile.revealed {
+  background-color: #fff;
+  background-size: cover;
+  background-position: center;
+}
+
+/* 보기 영역 */
+#choices-container {
+  margin-top: 30px;
+}
+
+#choices-buttons {
+  display: inline-block;
+}
+
+.choice-btn {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: #228be6;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.choice-btn:hover {
+  background-color: #1c7ed6;
+}
+
+/* 점수, 타이머 정보 */
+#score-area {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#timer-info {
+  margin-top: 10px;
+  color: #555;
+}
