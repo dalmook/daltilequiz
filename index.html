@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>사진 퀴즈 게임</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 카테고리 선택 화면 -->
+  <div id="category-container">
+    <h1>카테고리를 선택하세요</h1>
+    <div class="category-buttons">
+      <!-- 카테고리 버튼 -->
+      <button class="category-btn" data-category="ramen">라면</button>
+      <button class="category-btn" data-category="snack">과자</button>
+      <button class="category-btn" data-category="beverage">음료수</button>
+    </div>
+  </div>
+  
+  <!-- 퀴즈 게임 화면 -->
+  <div id="game-container" class="hidden">
+    <h2 id="quiz-category"></h2>
+    <div id="quiz-grid"></div>
+    
+    <div id="choices-container">
+      <h3>정답을 맞춰보세요!</h3>
+      <div id="choices-buttons"></div>
+    </div>
+    
+    <div id="score-area">
+      <p>점수: <span id="score-value">0</span></p>
+      <p id="timer-info"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
