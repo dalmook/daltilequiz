@@ -98,11 +98,7 @@ function loadQuestion(index) {
   updateProgress(index + 1);
   updateProgressText(index + 1);
 
-  // 타일 공개 전에 잠시 이미지 전체 공개 (2초)
-  setTimeout(() => {
-    hideAllTiles(); // 모든 타일을 숨깁니다.
-    startRevealingTiles(); // 타일 공개 시작
-  }, 2000); // 2초 후에 타일 숨김
+
 
   // 다음 문제 버튼 숨기기
   document.getElementById("next-question-btn").classList.add("hidden");
@@ -133,7 +129,7 @@ function startRevealingTiles() {
   // 2초마다 랜덤 타일 공개
   revealedInterval = setInterval(() => {
     revealRandomTile();
-  }, 2000); // 2초 간격으로 타일 공개
+  }, 1000); // 2초 간격으로 타일 공개
 }
 
 // 8x8 타일 생성
@@ -263,9 +259,6 @@ function checkAnswer(selectedOption) {
 function updateScore(points) {
   score += points;
   
-  // 점수가 음수가 되지 않도록 처리
-  if (score < 0) score = 0;
-
   const scoreElement = document.getElementById("score-value");
   scoreElement.textContent = score;
 
