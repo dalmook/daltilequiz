@@ -67,6 +67,31 @@ body {
   display: inline-block;
 }
 
+/* "처음으로" 버튼 스타일링 */
+#start-over-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #ffd43b;
+  color: #333;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#start-over-button:hover {
+  background-color: #ffda79;
+  transform: translateY(-3px);
+}
+
+#start-over-button:active {
+  transform: translateY(0px);
+}
+
 /* 프로그레스 바 */
 #progress-container {
   margin-bottom: 20px;
@@ -125,6 +150,7 @@ body {
   cursor: default;
   transition: transform 0.3s ease, opacity 0.5s ease;
   opacity: 1;
+  image-rendering: crisp-edges; /* 이미지 선명도 개선 */
 }
 
 .tile:hover {
@@ -242,6 +268,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  word-wrap: break-word; /* 긴 메시지 줄바꿈 */
 }
 
 #feedback-message.success {
@@ -298,7 +325,46 @@ body {
   transform: translateY(0px);
 }
 
-/* 팝업 애니메이션 */
+/* 퀴즈 완료 시 "처음으로" 버튼 팝업 스타일링 */
+#start-over-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 206, 86, 0.9); /* 반투명 배경 (노란색 계열) */
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 10;
+  animation: fadeIn 0.5s ease-out;
+}
+
+#start-over-popup.hidden {
+  display: none;
+}
+
+#start-over-btn {
+  padding: 12px 35px;
+  background-color: #fff; /* 버튼 배경을 흰색으로 변경 */
+  color: #ffce56;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: 18px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#start-over-btn:hover {
+  background-color: #f9f9f9;
+  transform: translateY(-3px);
+}
+
+#start-over-btn:active {
+  transform: translateY(0px);
+}
+
+/* "처음으로" 버튼 팝업 애니메이션은 기존과 동일 */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -332,7 +398,7 @@ body {
     font-size: 14px;
   }
 
-  .category-btn, #next-question-btn {
+  .category-btn, #next-question-btn, #start-over-btn, #start-over-button {
     font-size: 16px;
     padding: 12px 25px;
   }
@@ -363,10 +429,6 @@ body {
     flex-direction: column;
   }
 
-  #progress-container label {
-    margin-bottom: 5px;
-  }
-
   #progress-bar {
     width: 180px;
     height: 14px;
@@ -377,7 +439,7 @@ body {
     margin-left: 0;
   }
 
-  .category-btn, #next-question-btn {
+  .category-btn, #next-question-btn, #start-over-btn, #start-over-button {
     font-size: 16px;
     padding: 12px 25px;
   }
@@ -389,5 +451,12 @@ body {
 
   .score-box {
     gap: 20px;
+  }
+
+  #start-over-button {
+    top: 10px;
+    right: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
   }
 }

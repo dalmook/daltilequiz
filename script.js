@@ -43,6 +43,18 @@ document.addEventListener("DOMContentLoaded", () => {
       endQuiz();
     }
   });
+
+  // 기존 "처음으로" 버튼 클릭 이벤트 등록
+  const startOverBtn = document.getElementById("start-over-btn");
+  startOverBtn.addEventListener("click", () => {
+    resetQuiz();
+  });
+
+  // 새로 추가된 "처음으로" 버튼 클릭 이벤트 등록
+  const startOverButton = document.getElementById("start-over-button");
+  startOverButton.addEventListener("click", () => {
+    resetQuiz();
+  });
 });
 
 // 창 크기 변경 시 타일 배경 업데이트
@@ -54,14 +66,23 @@ window.addEventListener("resize", () => {
 
 // 최고 점수 초기화 및 표시
 function initializeHighScore() {
-  const highScore = localStorage.getItem('highScore') || 0;
-  document.getElementById("high-score").textContent = highScore;
+  // 초기에는 카테고리가 선택되지 않았으므로, 최고 점수 표시를 숨기거나 기본값 설정
+  document.getElementById("high-score").textContent = "0";
 }
 
 // 퀴즈 시작 함수
 function startQuiz(category) {
+  // 기존 인터벌이 남아있을 경우 클리어
+  if (revealedInterval) {
+    clearInterval(revealedInterval);
+    revealedInterval = null;
+  }
+
   document.getElementById("category-container").classList.add("hidden");
   document.getElementById("game-container").classList.remove("hidden");
+
+  // 현재 카테고리 이름 표시 요소 제거 또는 주석 처리
+  // document.getElementById("current-category").textContent = `카테고리: ${capitalizeFirstLetter(category)}`;
 
   // 해당 카테고리의 문제들을 필터링
   const categoryQuestions = data.filter((item) => item.category === category);
@@ -112,8 +133,6 @@ function loadQuestion(index) {
     hideAllTiles(); // 모든 타일을 숨깁니다.
     startRevealingTiles(); // 타일 공개 시작
   }, 0); // 즉시 타일 숨김
-  // 필요에 따라 500ms로 변경 가능
-  // }, 500); // 0.5초 후에 타일 숨김
 
   // 다음 문제 버튼 숨기기 (팝업 숨기기)
   document.getElementById("next-question-popup").classList.add("hidden");
@@ -214,10 +233,13 @@ function revealRandomTile() {
   // 아직 공개되지 않은 타일 목록
   const unrevealedTiles = tileElements.filter((tile) => !tile.classList.contains("revealed"));
 
-  // 모두 공개되었다면 멈춤
+  // 모두 공개되었다면 멈춤 및 -500점 감점
   if (unrevealedTiles.length === 0) {
     clearInterval(revealedInterval);
-    displayFeedback("모든 타일이 공개되었습니다!", "failure");
+    revealedInterval = null;
+    // 모든 타일이 공개되었으므로 -500점 감점 및 피드백 표시
+    updateScore(-500);
+    displayFeedback(`시간이 초과되었습니다! 정답은 "${currentAnswer}"입니다. -500점`, "failure");
     // "다음 문제" 버튼 팝업 표시
     document.getElementById("next-question-popup").classList.remove("hidden");
     return;
@@ -311,16 +333,17 @@ function checkAnswer(selectedOption) {
 function updateScore(points) {
   score += points;
 
-  // 점수가 음수가 되지 않도록 처리 삭제
-  // if (score < 0) score = 0;
-
   const scoreElement = document.getElementById("score-value");
   scoreElement.textContent = score;
 
-  // 최고 점수 업데이트 (현재 점수가 최고 점수보다 클 경우)
-  let highScore = parseInt(localStorage.getItem('highScore')) || 0;
+  // 현재 카테고리에 해당하는 최고 점수 키 생성
+  const highScoreKey = `highScore_${selectedCategory}`;
+
+  // 기존 최고 점수 가져오기
+  let highScore = parseInt(localStorage.getItem(highScoreKey)) || 0;
+
   if (score > highScore) {
-    localStorage.setItem('highScore', score);
+    localStorage.setItem(highScoreKey, score);
     highScore = score;
     displayFeedback("최고 점수를 갱신했습니다!", "update");
   }
@@ -342,8 +365,11 @@ function endQuiz() {
 
   document.getElementById("timer-info").textContent = "퀴즈가 종료되었습니다. 다른 카테고리를 선택해보세요!";
 
-  // 다음 문제 버튼 팝업 숨기기
+  // "다음 문제" 버튼 팝업 숨기기
   document.getElementById("next-question-popup").classList.add("hidden");
+
+  // 퀴즈 완료 팝업 표시
+  document.getElementById("start-over-popup").classList.remove("hidden");
 
   // 피드백 메시지 표시
   displayFeedback("퀴즈를 완료하셨습니다!", "success");
@@ -393,4 +419,37 @@ function hideFeedback() {
 function resetToCategorySelection() {
   document.getElementById("game-container").classList.add("hidden");
   document.getElementById("category-container").classList.remove("hidden");
+}
+
+// 퀴즈 리셋 함수 (재사용 가능)
+function resetQuiz() {
+  // 인터벌 클리어
+  if (revealedInterval) {
+    clearInterval(revealedInterval);
+    revealedInterval = null;
+  }
+
+  // 모든 타일 숨기기
+  hideAllTiles();
+
+  // 모든 타일의 'revealed' 클래스 제거
+  tileElements.forEach(tile => tile.classList.remove("revealed"));
+
+  // 모든 팝업 숨기기
+  document.getElementById("next-question-popup").classList.add("hidden");
+  document.getElementById("start-over-popup").classList.add("hidden");
+
+  // 퀴즈 게임 화면 숨기기
+  document.getElementById("game-container").classList.add("hidden");
+
+  // 카테고리 선택 화면 보이기
+  document.getElementById("category-container").classList.remove("hidden");
+
+  // 점수 및 진행 상황 리셋
+  score = 0;
+  revealedCount = 0;
+  updateScore(0);
+  updateProgress(0);
+  updateProgressText(0);
+  hideFeedback();
 }
