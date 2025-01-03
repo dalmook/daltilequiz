@@ -45,6 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// 창 크기 변경 시 타일 배경 업데이트
+window.addEventListener("resize", () => {
+  if (tileElements.length > 0) {
+    updateTileBackgrounds();
+  }
+});
+
 // 최고 점수 초기화 및 표시
 function initializeHighScore() {
   const highScore = localStorage.getItem('highScore') || 0;
@@ -146,24 +153,60 @@ function createTiles(imagePath) {
   quizGrid.innerHTML = "";
   tileElements = [];
 
-  for (let row = 0; row < 8; row++) {
-    for (let col = 0; col < 8; col++) {
-      const tile = document.createElement("div");
-      tile.classList.add("tile");
-      // 타일마다 배경 위치 설정
-      tile.style.backgroundImage = `url('${imagePath}')`;
-      tile.style.backgroundPosition = `-${col * 50}px -${row * 50}px`; // 타일 크기 50px 가정
-      tile.style.backgroundSize = `400px 400px`; // 전체 이미지 크기
+  // 이미지 로드가 완료되면 타일 생성
+  preloadImage(imagePath)
+    .then(() => {
+      // 그리드 크기 가져오기
+      const gridRect = quizGrid.getBoundingClientRect();
+      const gridWidth = gridRect.width;
+      const gridHeight = gridRect.height;
+      const tileSize = gridWidth / 8; // 가로 기준
 
-      // 커버 레이어 추가
-      const cover = document.createElement("div");
-      cover.classList.add("cover");
-      tile.appendChild(cover);
+      // 각 타일의 배경 크기 및 위치 설정
+      for (let row = 0; row < 8; row++) {
+        for (let col = 0; col < 8; col++) {
+          const tile = document.createElement("div");
+          tile.classList.add("tile");
+          // 타일마다 배경 위치 설정
+          tile.style.backgroundImage = `url('${imagePath}')`;
+          tile.style.backgroundSize = `${gridWidth}px ${gridHeight}px`;
+          tile.style.backgroundPosition = `-${col * tileSize}px -${row * tileSize}px`;
 
-      tileElements.push(tile);
-      quizGrid.appendChild(tile);
-    }
-  }
+          // 커버 레이어 추가
+          const cover = document.createElement("div");
+          cover.classList.add("cover");
+          tile.appendChild(cover);
+
+          tileElements.push(tile);
+          quizGrid.appendChild(tile);
+        }
+      }
+    })
+    .catch((error) => {
+      console.error("이미지 로딩 실패:", error);
+      displayFeedback("이미지를 로딩하는 데 실패했습니다.", "failure");
+      resetToCategorySelection();
+    });
+}
+
+// 창 크기 변경 시 타일 배경 업데이트 함수
+function updateTileBackgrounds() {
+  if (tileElements.length === 0) return;
+
+  const quizGrid = document.getElementById("quiz-grid");
+  const gridRect = quizGrid.getBoundingClientRect();
+  const gridWidth = gridRect.width;
+  const gridHeight = gridRect.height;
+  const tileSize = gridWidth / 8; // 가로 기준
+
+  tileElements.forEach((tile, index) => {
+    const row = Math.floor(index / 8);
+    const col = index % 8;
+    const imagePath = tile.style.backgroundImage.slice(5, -2); // url('...')에서 URL 추출
+
+    tile.style.backgroundSize = `${gridWidth}px ${gridHeight}px`;
+    tile.style.backgroundPosition = `-${col * tileSize}px -${row * tileSize}px`;
+  });
 }
 
 // 랜덤 타일 공개
@@ -299,7 +342,7 @@ function endQuiz() {
 
   document.getElementById("timer-info").textContent = "퀴즈가 종료되었습니다. 다른 카테고리를 선택해보세요!";
 
-  // 다음 문제 버튼 숨기기
+  // 다음 문제 버튼 팝업 숨기기
   document.getElementById("next-question-popup").classList.add("hidden");
 
   // 피드백 메시지 표시
