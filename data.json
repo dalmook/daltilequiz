@@ -431,6 +431,161 @@
   },
   {
       "category": "cinema",
+      "image": "images/cinema/더락.webp",
+      "answer": "더락"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/곡성.webp",
+      "answer": "곡성"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/파묘.webp",
+      "answer": "파묘"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/아가씨.webp",
+      "answer": "아가씨"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/어벤져스.webp",
+      "answer": "어벤져스"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/아이언맨.webp",
+      "answer": "아이언맨"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/킹스맨.webp",
+      "answer": "킹스맨"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/월드워Z.webp",
+      "answer": "월드워Z"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/아마겟돈.webp",
+      "answer": "아마겟돈"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/단테스 피크.webp",
+      "answer": "단테스 피크"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/비트.webp",
+      "answer": "비트"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/신세계.webp",
+      "answer": "신세계"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/해운대.jpg",
+      "answer": "해운대"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/아저씨.webp",
+      "answer": "아저씨"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/클레멘 타인.webp",
+      "answer": "클레멘 타인"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/티라노의 발톱.webp",
+      "answer": "티라노의 발톱"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/매드맥스.webp",
+      "answer": "매드맥스"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/ET.webp",
+      "answer": "E.T"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/터미네이터.webp",
+      "answer": "터미네이터"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/내부자들.webp",
+      "answer": "내부자들"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/부당거래.webp",
+      "answer": "부당거래"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/사생결단.webp",
+      "answer": "사생결단"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/복수는 나의 것.jpg",
+      "answer": "복수는 나의 것"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/반지의 제왕.webp",
+      "answer": "반지의 제왕"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/스타워즈.webp",
+      "answer": "스타워즈"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/300.webp",
+      "answer": "300"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/글래디에이터.webp",
+      "answer": "글래디에이터"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/어바웃타임.webp",
+      "answer": "어바웃타임"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/러브레터.webp",
+      "answer": "러브레터"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/장화홍련.webp",
+      "answer": "장화홍련"
+  },
+  {
+      "category": "cinema",
+      "image": "images/cinema/세븐.webp",
+      "answer": "세븐"
+  },
+  {
+      "category": "cinema",
       "image": "images/cinema/라이언일병구하기.jpg",
       "answer": "라이언일병구하기"
   },
