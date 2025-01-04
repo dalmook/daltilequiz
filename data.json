@@ -1,4 +1,14 @@
-[
+[ 
+  {
+  "category": "ramen",
+  "image": "images/remen/간짬뽕.webp",
+  "answer": "간짬뽕"
+  },
+  {
+  "category": "ramen",
+  "image": "images/remen/감자면.webp",
+  "answer": "감자면"
+  },
   {
     "category": "ramen",
     "image": "images/remen/김치라면.webp",
@@ -11,9 +21,24 @@
   },
   {
     "category": "ramen",
+    "image": "images/remen/나가사키짬뽕.webp",
+    "answer": "나가사키짬뽕"
+  },
+  {
+    "category": "ramen",
+    "image": "images/remen/남자라면.webp",
+    "answer": "남자라면"
+  },
+  {
+    "category": "ramen",
+    "image": "images/remen/너구리.webp",
+    "answer": "너구리"
+  },
+  {
+    "category": "ramen",
     "image": "images/remen/된장라면.webp",
     "answer": "된장라면"
-  },
+  }, 
   {
     "category": "ramen",
     "image": "images/remen/마열라면.jpg",
@@ -26,7 +51,7 @@
   },
   {
     "category": "ramen",
-    "image": "images/remen/미역국라면.webp",
+    "image": "images/remen/미역국라면.jpg",
     "answer": "미역국라면"
   },
   {
@@ -41,8 +66,23 @@
   },
   {
     "category": "ramen",
+    "image": "images/remen/사리곰탕면.webp",
+    "answer": "사리곰탕면"
+  },
+  {
+    "category": "ramen",
     "image": "images/remen/삼양라면.jpg",
     "answer": "삼양라면"
+  },
+  {
+    "category": "ramen",
+    "image": "images/remen/생생우동.webp",
+    "answer": "생생우동"
+  },
+  {
+    "category": "ramen",
+    "image": "images/remen/스낵면.webp",
+    "answer": "스낵면"
   },
   {
     "category": "ramen",
@@ -61,8 +101,18 @@
   },
   {
     "category": "ramen",
+    "image": "images/remen/안성탕면.webp",
+    "answer": "안성탕면"
+  },
+  {
+    "category": "ramen",
     "image": "images/remen/열라면.webp",
     "answer": "열라면"
+  },
+  {
+    "category": "ramen",
+    "image": "images/remen/오징어짬뽕.webp",
+    "answer": "오징어짬뽕"
   },
   {
     "category": "ramen",
@@ -71,13 +121,33 @@
   },
   {
     "category": "ramen",
+    "image": "images/remen/진짬뽕.webp",
+    "answer": "진짬뽕"
+  },
+  {
+    "category": "ramen",
+    "image": "images/remen/짜왕.webp",
+    "answer": "짜왕"
+  },
+  {
+    "category": "ramen",
     "image": "images/remen/짜파게티.webp",
     "answer": "짜파게티"
   },
   {
     "category": "ramen",
+    "image": "images/remen/참깨라면.webp",
+    "answer": "참깨라면"
+  },
+  {
+    "category": "ramen",
     "image": "images/remen/틈새라면.png",
     "answer": "틈새라면"
+  },
+  {
+    "category": "ramen",
+    "image": "images/remen/팔도비빔면.webp",
+    "answer": "팔도비빔면"
   },
   {
     "category": "ramen",
