@@ -1,157 +1,157 @@
 [ 
   {
   "category": "ramen",
-  "image": "images/remen/간짬뽕.webp",
+  "image": "images/ramen/간짬뽕.webp",
   "answer": "간짬뽕"
   },
   {
   "category": "ramen",
-  "image": "images/remen/감자면.webp",
+  "image": "images/ramen/감자면.webp",
   "answer": "감자면"
   },
   {
     "category": "ramen",
-    "image": "images/remen/김치라면.webp",
+    "image": "images/ramen/김치라면.webp",
     "answer": "김치라면"
   },
   {
     "category": "ramen",
-    "image": "images/remen/꼬꼬면.webp",
+    "image": "images/ramen/꼬꼬면.webp",
     "answer": "꼬꼬면"
   },
   {
     "category": "ramen",
-    "image": "images/remen/나가사키짬뽕.webp",
+    "image": "images/ramen/나가사키짬뽕.webp",
     "answer": "나가사키짬뽕"
   },
   {
     "category": "ramen",
-    "image": "images/remen/남자라면.webp",
+    "image": "images/ramen/남자라면.webp",
     "answer": "남자라면"
   },
   {
     "category": "ramen",
-    "image": "images/remen/너구리.webp",
+    "image": "images/ramen/너구리.webp",
     "answer": "너구리"
   },
   {
     "category": "ramen",
-    "image": "images/remen/된장라면.webp",
+    "image": "images/ramen/된장라면.webp",
     "answer": "된장라면"
   }, 
   {
     "category": "ramen",
-    "image": "images/remen/마열라면.jpg",
+    "image": "images/ramen/마열라면.jpg",
     "answer": "마열라면"
   },
   {
     "category": "ramen",
-    "image": "images/remen/멸치칼국수.webp",
+    "image": "images/ramen/멸치칼국수.webp",
     "answer": "멸치칼국수"
   },
   {
     "category": "ramen",
-    "image": "images/remen/미역국라면.jpg",
+    "image": "images/ramen/미역국라면.jpg",
     "answer": "미역국라면"
   },
   {
     "category": "ramen",
-    "image": "images/remen/불닭볶음면.webp",
+    "image": "images/ramen/불닭볶음면.webp",
     "answer": "불닭볶음면"
   },
   {
     "category": "ramen",
-    "image": "images/remen/빽라면.jpg",
+    "image": "images/ramen/빽라면.jpg",
     "answer": "빽라면"
   },
   {
     "category": "ramen",
-    "image": "images/remen/사리곰탕면.webp",
+    "image": "images/ramen/사리곰탕면.webp",
     "answer": "사리곰탕면"
   },
   {
     "category": "ramen",
-    "image": "images/remen/삼양라면.jpg",
+    "image": "images/ramen/삼양라면.jpg",
     "answer": "삼양라면"
   },
   {
     "category": "ramen",
-    "image": "images/remen/생생우동.webp",
+    "image": "images/ramen/생생우동.webp",
     "answer": "생생우동"
   },
   {
     "category": "ramen",
-    "image": "images/remen/스낵면.webp",
+    "image": "images/ramen/스낵면.webp",
     "answer": "스낵면"
   },
   {
     "category": "ramen",
-    "image": "images/remen/스파게티.webp",
+    "image": "images/ramen/스파게티.webp",
     "answer": "스파게티"
   },
   {
     "category": "ramen",
-    "image": "images/remen/신라면1.jpg",
+    "image": "images/ramen/신라면1.jpg",
     "answer": "신라면"
   },
   {
     "category": "ramen",
-    "image": "images/remen/신라면레드.jpg",
+    "image": "images/ramen/신라면레드.jpg",
     "answer": "신라면 레드"
   },
   {
     "category": "ramen",
-    "image": "images/remen/안성탕면.webp",
+    "image": "images/ramen/안성탕면.webp",
     "answer": "안성탕면"
   },
   {
     "category": "ramen",
-    "image": "images/remen/열라면.webp",
+    "image": "images/ramen/열라면.webp",
     "answer": "열라면"
   },
   {
     "category": "ramen",
-    "image": "images/remen/오징어짬뽕.webp",
+    "image": "images/ramen/오징어짬뽕.webp",
     "answer": "오징어짬뽕"
   },
   {
     "category": "ramen",
-    "image": "images/remen/진라면.jpg",
+    "image": "images/ramen/진라면.jpg",
     "answer": "진라면 매운맛"
   },
   {
     "category": "ramen",
-    "image": "images/remen/진짬뽕.webp",
+    "image": "images/ramen/진짬뽕.webp",
     "answer": "진짬뽕"
   },
   {
     "category": "ramen",
-    "image": "images/remen/짜왕.webp",
+    "image": "images/ramen/짜왕.webp",
     "answer": "짜왕"
   },
   {
     "category": "ramen",
-    "image": "images/remen/짜파게티.webp",
+    "image": "images/ramen/짜파게티.webp",
     "answer": "짜파게티"
   },
   {
     "category": "ramen",
-    "image": "images/remen/참깨라면.webp",
+    "image": "images/ramen/참깨라면.webp",
     "answer": "참깨라면"
   },
   {
     "category": "ramen",
-    "image": "images/remen/틈새라면.png",
+    "image": "images/ramen/틈새라면.png",
     "answer": "틈새라면"
   },
   {
     "category": "ramen",
-    "image": "images/remen/팔도비빔면.webp",
+    "image": "images/ramen/팔도비빔면.webp",
     "answer": "팔도비빔면"
   },
   {
     "category": "ramen",
-    "image": "images/remen/해물라면.png",
+    "image": "images/ramen/해물라면.png",
     "answer": "해물라면"
   },
   {
