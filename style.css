@@ -21,8 +21,8 @@ body {
 /* 카테고리 선택 화면 스타일 */
 #category-container {
   position: relative; /* ::before 가상 요소를 올바르게 배치하기 위해 상대 위치 지정 */
-  width: 100vw;       /* 전체 뷰포트 너비 */
-  height: 100vh;      /* 전체 뷰포트 높이 */
+  width: 900vw;       /* 전체 뷰포트 너비 */
+  height: 900vh;      /* 전체 뷰포트 높이 */
   overflow: hidden;   /* 가상 요소가 컨테이너를 벗어나지 않도록 숨김 처리 */
   display: flex;      /* 중앙 정렬을 위한 Flexbox 사용 */
   flex-direction: column;

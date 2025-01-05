@@ -135,7 +135,7 @@ function startQuiz(category) {
   updateScore(0);
   updateProgress(0);
   updateProgressText(0);
-  document.getElementById("timer-info").textContent = "이미지가 1초마다 한 칸씩 공개됩니다!";
+  document.getElementById("timer-info").textContent = "♥";
   
   // 프로그레스 바 초기화
   updateProgressText(0);
