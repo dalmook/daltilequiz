@@ -326,8 +326,18 @@
   },
   {
     "category": "beverage",
+    "image": "images/beverage/게토레이.webp",
+    "answer": "게토레이"
+  },
+  {
+    "category": "beverage",
     "image": "images/beverage/닥터페퍼.jpg",
     "answer": "닥터페퍼"
+  },
+  {
+    "category": "beverage",
+    "image": "images/beverage/맛스타.webp",
+    "answer": "맛스타"
   },
   {
     "category": "beverage",
@@ -338,6 +348,11 @@
     "category": "beverage",
     "image": "images/beverage/미닛메이드.jpg",
     "answer": "미닛메이드"
+  },
+  {
+    "category": "beverage",
+    "image": "images/beverage/미에로 화이바.jpg",
+    "answer": "미에로 화이바"
   },
   {
     "category": "beverage",
@@ -371,8 +386,18 @@
   },
   {
     "category": "beverage",
+    "image": "images/beverage/실론티.jpg",
+    "answer": "실론티"
+  },
+  {
+    "category": "beverage",
     "image": "images/beverage/쌕쌕.png",
     "answer": "쌕쌕"
+  },
+  {
+    "category": "beverage",
+    "image": "images/beverage/아침햇살.jpg",
+    "answer": "아침햇살"
   },
   {
     "category": "beverage",
@@ -411,8 +436,23 @@
   },
   {
     "category": "beverage",
+    "image": "images/beverage/토레타.jpg",
+    "answer": "토레타"
+  },
+  {
+    "category": "beverage",
+    "image": "images/beverage/파워에이드.webp",
+    "answer": "파워에이드"
+  },
+  {
+    "category": "beverage",
     "image": "images/beverage/펩시.jpg",
     "answer": "펩시"
+  },
+  {
+    "category": "beverage",
+    "image": "images/beverage/하늘보리.jpg",
+    "answer": "하늘보리"
   },
   {
     "category": "beverage",
