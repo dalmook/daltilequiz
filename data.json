@@ -858,5 +858,150 @@
       "category": "singer",
       "image": "images/singer/핑클.jpg",
       "answer": "핑클"
+  },
+  {
+    "category": "carmark",
+    "image": "images/carmark/BMW.jpg",
+    "answer": "BMW"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/기아.jpg",
+      "answer": "기아"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/닛산.jpg",
+      "answer": "닛산"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/랜드로버.jpg",
+      "answer": "랜드로버"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/렉서스.jpg",
+      "answer": "렉서스"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/롤스로이스.jpg",
+      "answer": "롤스로이스"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/링컨.jpg",
+      "answer": "링컨"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/미쓰비시.jpg",
+      "answer": "미쓰비시"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/벤츠.jpg",
+      "answer": "벤츠"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/볼보.jpg",
+      "answer": "볼보"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/사브.jpg",
+      "answer": "사브"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/쉐보레.jpg",
+      "answer": "쉐보레"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/스카니아.jpg",
+      "answer": "스카니아"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/쌍용.jpg",
+      "answer": "쌍용"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/아우디.jpg",
+      "answer": "아우디"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/재규어.jpg",
+      "answer": "재규어"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/지프.jpg",
+      "answer": "지프"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/캐딜락.jpg",
+      "answer": "캐딜락"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/코닉세그.jpg",
+      "answer": "코닉세그"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/크라이슬러.jpg",
+      "answer": "크라이슬러"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/토요타.jpg",
+      "answer": "토요타"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/페라리.jpg",
+      "answer": "페라리"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/포드.jpg",
+      "answer": "포드"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/포르쉐.jpg",
+      "answer": "포르쉐"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/폭스바겐.jpg",
+      "answer": "폭스바겐"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/푸조.jpg",
+      "answer": "푸조"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/피아트.jpg",
+      "answer": "피아트"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/현대.jpg",
+      "answer": "현대"
+  },
+  {
+      "category": "carmark",
+      "image": "images/carmark/혼다.jpg",
+      "answer": "혼다"
   }
 ]

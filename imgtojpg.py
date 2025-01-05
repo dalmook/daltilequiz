@@ -40,11 +40,11 @@ def convert_and_resize_images(folder_path, category, output_json_path):
     with open(output_json_path, "w", encoding="utf-8") as json_file:
         json.dump(json_data, json_file, ensure_ascii=False, indent=4)
 
-category="singer"
+category="carmark"
 # Example usage
 convert_and_resize_images(
-    folder_path="C:/Users/chosu/OneDrive/사진/가수/",
-    category="singer",
+    folder_path="C:/Users/chosu/OneDrive/문서/GitHub/daltilequiz/images/carmark",
+    category="carmark",
     output_json_path=f"C:/Users/chosu/OneDrive/문서/{category}.json"
 )
 
