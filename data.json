@@ -51,6 +51,11 @@
   },
   {
     "category": "ramen",
+    "image": "images/ramen/무파마.jpg",
+    "answer": "무파마"
+  },
+  {
+    "category": "ramen",
     "image": "images/ramen/미역국라면.jpg",
     "answer": "미역국라면"
   },
@@ -116,7 +121,7 @@
   },
   {
     "category": "ramen",
-    "image": "images/ramen/진라면.jpg",
+    "image": "images/ramen/진라면매운맛.jpg",
     "answer": "진라면 매운맛"
   },
   {
@@ -168,6 +173,11 @@
     "category": "snack",
     "image": "images/snack/꼬깔콘.jpg",
     "answer": "꼬깔콘"
+  },
+  {
+    "category": "snack",
+    "image": "images/snack/꿀꽈배기.jpg",
+    "answer": "꿀꽈배기"
   },
   {
     "category": "snack",
@@ -363,6 +373,11 @@
     "category": "beverage",
     "image": "images/beverage/쌕쌕.png",
     "answer": "쌕쌕"
+  },
+  {
+    "category": "beverage",
+    "image": "images/beverage/암바사.png",
+    "answer": "암바사"
   },
   {
     "category": "beverage",
