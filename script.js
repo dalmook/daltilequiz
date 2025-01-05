@@ -10,8 +10,8 @@ let questions = [];
 let currentQuestionIndex = 0;
 const totalQuestions = 10;
 
-// 새로운 변수: 타일 공개 속도 (기본값 1000ms)
-let revealSpeed = 1000;
+// 새로운 변수: 타일 공개 속도 (초 단위, 기본값 0.5초)
+let revealSpeed = 0.5;
 
 // JSON 데이터 불러오기
 fetch("data.json")
@@ -76,9 +76,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (speedSlider && speedValueDisplay) {
     speedSlider.addEventListener("input", () => {
-      revealSpeed = parseInt(speedSlider.value);
-      speedValueDisplay.textContent = revealSpeed;
-      console.log(`타일 공개 속도 변경: ${revealSpeed}ms`);
+      revealSpeed = parseFloat(speedSlider.value); // 초 단위
+      speedValueDisplay.textContent = revealSpeed.toFixed(1); // 소수점 한 자리 표시
+      console.log(`타일 공개 속도 변경: ${revealSpeed}s`);
       
       // 만약 타일 공개가 진행 중이라면 인터벌을 재설정
       if (revealedInterval) {
@@ -136,7 +136,7 @@ function startQuiz(category) {
   updateProgress(0);
   updateProgressText(0);
   document.getElementById("timer-info").textContent = "이미지가 1초마다 한 칸씩 공개됩니다!";
-
+  
   // 프로그레스 바 초기화
   updateProgressText(0);
 
@@ -223,7 +223,7 @@ function startRevealingTiles() {
   console.log("타일 공개 시작.");
   revealedInterval = setInterval(() => {
     revealRandomTile();
-  }, revealSpeed); // 사용자 설정 속도로 타일 공개
+  }, revealSpeed * 1000); // 초 단위로 변환하여 타일 공개
 }
 
 // 8x8 타일 생성
