@@ -11,6 +11,7 @@ body {
   color: #333;
   text-align: center;
   padding: 20px;
+  overflow: hidden;
 }
 
 /* 숨김 처리 */
