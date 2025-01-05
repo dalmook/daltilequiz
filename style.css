@@ -10,8 +10,7 @@ body {
   background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
   color: #333;
   text-align: center;
-  margin: 0;
-  padding: 0;
+  margin: 0;  
 }
 
 /* 숨김 처리 */
@@ -33,6 +32,7 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 텍스트 가독성을 높이기 위한 그림자 */
   background: transparent; /* 배경 투명하게 설정 */
   z-index: 2;              /* 게임 컨테이너보다 위에 표시 */
+  padding: 20px;
 }
 
 #category-container::before {
@@ -148,6 +148,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+  padding: 20px;
 }
 
 /* "처음으로" 버튼 스타일링 */

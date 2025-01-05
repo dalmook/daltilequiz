@@ -163,7 +163,7 @@ function loadQuestion(index) {
   console.log(`현재 정답: ${currentAnswer}`);
 
   // 퀴즈 정보 설정 (헤더 텍스트 간소화)
-  document.getElementById("quiz-category").textContent = `이미지 맞추기 퀴즈!`;
+  document.getElementById("quiz-category").textContent = `이미지 맞추기!`;
 
   // 타일 그리드 초기화 및 이미지 로드 대기
   createTiles(question.image)
