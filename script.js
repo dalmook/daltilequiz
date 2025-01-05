@@ -15,8 +15,8 @@ fetch("data.json")
   .then((response) => response.json())
   .then((jsonData) => {
     data = jsonData;
-    initializeHighScore(); // 최고 점수 초기화
     console.log("데이터 로드 완료:", data);
+    // 최고 점수 초기화는 퀴즈 시작 시 호출
   })
   .catch((error) => {
     console.error("JSON 불러오기 실패:", error);
@@ -37,29 +37,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 다음 문제 버튼 클릭 이벤트 등록
   const nextQuestionBtn = document.getElementById("next-question-btn");
-  nextQuestionBtn.addEventListener("click", () => {
-    currentQuestionIndex++;
-    console.log("다음 질문 인덱스:", currentQuestionIndex);
-    if (currentQuestionIndex < totalQuestions) {
-      loadQuestion(currentQuestionIndex);
-    } else {
-      endQuiz();
-    }
-  });
+  if (nextQuestionBtn) {
+    nextQuestionBtn.addEventListener("click", () => {
+      currentQuestionIndex++;
+      console.log("다음 질문 인덱스:", currentQuestionIndex);
+      if (currentQuestionIndex < totalQuestions) {
+        loadQuestion(currentQuestionIndex);
+      } else {
+        endQuiz();
+      }
+    });
+  }
 
   // 기존 "처음으로" 버튼 클릭 이벤트 등록
   const startOverBtn = document.getElementById("start-over-btn");
-  startOverBtn.addEventListener("click", () => {
-    console.log('"처음으로" 버튼 클릭됨 (팝업 내)');
-    resetQuiz();
-  });
+  if (startOverBtn) {
+    startOverBtn.addEventListener("click", () => {
+      console.log('"처음으로" 버튼 클릭됨 (팝업 내)');
+      resetQuiz();
+    });
+  }
 
   // 새로 추가된 "처음으로" 버튼 클릭 이벤트 등록
   const startOverButton = document.getElementById("start-over-button");
-  startOverButton.addEventListener("click", () => {
-    console.log('"처음으로" 버튼 클릭됨 (퀴즈 화면 내)');
-    resetQuiz();
-  });
+  if (startOverButton) {
+    startOverButton.addEventListener("click", () => {
+      console.log('"처음으로" 버튼 클릭됨 (퀴즈 화면 내)');
+      resetQuiz();
+    });
+  }
 });
 
 // 창 크기 변경 시 타일 배경 업데이트
@@ -71,7 +77,9 @@ window.addEventListener("resize", () => {
 
 // 최고 점수 초기화 및 표시
 function initializeHighScore() {
-  document.getElementById("high-score").textContent = "0";
+  const highScoreKey = `highScore_${selectedCategory}`;
+  const highScore = parseInt(localStorage.getItem(highScoreKey)) || 0;
+  document.getElementById("high-score").textContent = highScore;
 }
 
 // 퀴즈 시작 함수
@@ -85,9 +93,6 @@ function startQuiz(category) {
 
   document.getElementById("category-container").classList.add("hidden");
   document.getElementById("game-container").classList.remove("hidden");
-
-  // 현재 카테고리 이름 표시 요소 제거 또는 주석 처리
-  // document.getElementById("current-category").textContent = `카테고리: ${capitalizeFirstLetter(category)}`;
 
   // 해당 카테고리의 문제들을 필터링
   const categoryQuestions = data.filter((item) => item.category === category);
@@ -114,6 +119,9 @@ function startQuiz(category) {
   // 프로그레스 바 초기화
   updateProgressText(0);
 
+  // 최고 점수 초기화
+  initializeHighScore();
+
   // 첫 번째 문제 로드
   loadQuestion(currentQuestionIndex);
 }
@@ -136,28 +144,33 @@ function loadQuestion(index) {
   // 퀴즈 정보 설정 (헤더 텍스트 간소화)
   document.getElementById("quiz-category").textContent = `이미지 맞추기 퀴즈!`;
 
-  // 타일 그리드 초기화
-  createTiles(question.image);
+  // 타일 그리드 초기화 및 이미지 로드 대기
+  createTiles(question.image)
+    .then(() => {
+      // 보기 버튼 생성 (자동 생성)
+      const options = generateOptions(selectedCategory, currentAnswer);
+      createChoiceButtons(options);
 
-  // 보기 버튼 생성 (자동 생성)
-  const options = generateOptions(selectedCategory, currentAnswer);
-  createChoiceButtons(options);
+      // 프로그레스 바 업데이트
+      updateProgress(index + 1);
+      updateProgressText(index + 1);
 
-  // 프로그레스 바 업데이트
-  updateProgress(index + 1);
-  updateProgressText(index + 1);
+      // 타일 공개 전에 타일 숨기기 및 revealedCount 리셋
+      hideAllTiles(); // 모든 타일을 숨깁니다.
+      revealedCount = 0; // 공개된 타일 수 리셋
+      console.log("revealedCount 리셋됨.");
+      startRevealingTiles(); // 타일 공개 시작
 
-  // 타일 공개 전에 타일 숨기기 및 revealedCount 리셋
-  hideAllTiles(); // 모든 타일을 숨깁니다.
-  revealedCount = 0; // 공개된 타일 수 리셋
-  console.log("revealedCount 리셋됨.");
-  startRevealingTiles(); // 타일 공개 시작
+      // 다음 문제 버튼 숨기기 (팝업 숨기기)
+      document.getElementById("next-question-popup").classList.add("hidden");
 
-  // 다음 문제 버튼 숨기기 (팝업 숨기기)
-  document.getElementById("next-question-popup").classList.add("hidden");
-
-  // 피드백 메시지 숨기기
-  hideFeedback();
+      // 피드백 메시지 숨기기
+      hideFeedback();
+    })
+    .catch((error) => {
+      console.error("타일 생성 중 오류 발생:", error);
+      // 추가적인 오류 처리가 필요하면 여기에 작성
+    });
 }
 
 // 이미지 미리 로드 함수
@@ -200,7 +213,7 @@ function createTiles(imagePath) {
   tileElements = [];
 
   // 이미지 로드가 완료되면 타일 생성
-  preloadImage(imagePath)
+  return preloadImage(imagePath)
     .then(() => {
       // 그리드 크기 가져오기
       const gridRect = quizGrid.getBoundingClientRect();
@@ -323,6 +336,11 @@ function generateOptions(category, correctAnswer) {
 // 보기 버튼 생성
 function createChoiceButtons(options) {
   const choicesContainer = document.getElementById("choices-buttons");
+  if (!choicesContainer) {
+    console.error("보기 버튼 컨테이너를 찾을 수 없습니다.");
+    displayFeedback("보기 버튼을 찾을 수 없습니다.", "failure");
+    return;
+  }
   choicesContainer.innerHTML = "";
 
   options.forEach((option) => {
