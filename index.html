@@ -10,6 +10,13 @@
   <!-- 카테고리 선택 화면 -->
   <div id="category-container">
     <h1>카테고리를 선택하세요</h1>
+    
+    <!-- 타일 공개 속도 조절 슬라이더 추가 -->
+    <div class="speed-control">
+      <label for="speed-slider">타일 공개 속도: <span id="speed-value">1000</span>ms</label>
+      <input type="range" id="speed-slider" min="200" max="3000" step="100" value="1000">
+    </div>
+        
     <div class="category-buttons">
       <!-- 카테고리 버튼 -->
       <button class="category-btn" data-category="ramen">라면</button>
@@ -17,7 +24,7 @@
       <button class="category-btn" data-category="beverage">음료</button>
       <button class="category-btn" data-category="cinema">영화</button>
       <button class="category-btn" data-category="singer">가수</button>
-      <button class="category-btn" data-category="singer">자동차 로고</button>
+      <button class="category-btn" data-category="carmark">자동차 로고</button>
     </div>
   </div>
   

@@ -10,6 +10,9 @@ let questions = [];
 let currentQuestionIndex = 0;
 const totalQuestions = 10;
 
+// 새로운 변수: 타일 공개 속도 (기본값 1000ms)
+let revealSpeed = 1000;
+
 // JSON 데이터 불러오기
 fetch("data.json")
   .then((response) => response.json())
@@ -64,6 +67,24 @@ document.addEventListener("DOMContentLoaded", () => {
     startOverButton.addEventListener("click", () => {
       console.log('"처음으로" 버튼 클릭됨 (퀴즈 화면 내)');
       resetQuiz();
+    });
+  }
+
+  // 속도 조절 슬라이더 이벤트 등록
+  const speedSlider = document.getElementById("speed-slider");
+  const speedValueDisplay = document.getElementById("speed-value");
+
+  if (speedSlider && speedValueDisplay) {
+    speedSlider.addEventListener("input", () => {
+      revealSpeed = parseInt(speedSlider.value);
+      speedValueDisplay.textContent = revealSpeed;
+      console.log(`타일 공개 속도 변경: ${revealSpeed}ms`);
+      
+      // 만약 타일 공개가 진행 중이라면 인터벌을 재설정
+      if (revealedInterval) {
+        clearInterval(revealedInterval);
+        startRevealingTiles();
+      }
     });
   }
 });
@@ -202,7 +223,7 @@ function startRevealingTiles() {
   console.log("타일 공개 시작.");
   revealedInterval = setInterval(() => {
     revealRandomTile();
-  }, 1000); // 1초 간격으로 타일 공개
+  }, revealSpeed); // 사용자 설정 속도로 타일 공개
 }
 
 // 8x8 타일 생성
