@@ -21,8 +21,8 @@ body {
 /* 카테고리 선택 화면 스타일 */
 #category-container {
   position: relative; /* ::before 가상 요소를 올바르게 배치하기 위해 상대 위치 지정 */
-  width: 90vw;       /* 전체 뷰포트 너비 */
-  height: 90vh;      /* 전체 뷰포트 높이 */
+  width: 100vw;       /* 전체 뷰포트 너비 */
+  height: 100vh;      /* 전체 뷰포트 높이 */
   overflow: hidden;   /* 가상 요소가 컨테이너를 벗어나지 않도록 숨김 처리 */
   display: flex;      /* 중앙 정렬을 위한 Flexbox 사용 */
   flex-direction: column;
@@ -39,8 +39,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 90%;
   background-image: url('images/라이언일병.jpg'); /* 실제 배경 이미지 경로로 변경 */
   background-size: cover;          /* 배경 이미지가 컨테이너를 완전히 덮도록 설정 */
   background-position: center;     /* 배경 이미지의 위치를 중앙으로 설정 */
